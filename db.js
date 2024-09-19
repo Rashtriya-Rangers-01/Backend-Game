@@ -29,7 +29,7 @@ const HangmanQuestionSchema = new mongoose.Schema({
         required: true
     },
     articleReferences: {
-        type: [String],
+        type: [Number],
         required: true
     },
     institution: {
