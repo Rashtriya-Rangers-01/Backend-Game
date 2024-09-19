@@ -17,7 +17,13 @@ const HangmanQuestionSchema = new mongoose.Schema({
     },
     options: {
         type: [String],
-        required: true
+        required: true,
+        validate: {
+            validator: function(v) {
+                return v.length === 8;
+            },
+            message: props => `Options array must contain exactly 8 items, but got ${props.value.length}.`
+        }
     },
     blankWords: {
         type: [String],
