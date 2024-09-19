@@ -34,7 +34,7 @@ const HangmanQuestionSchema = new mongoose.Schema({
     },
     institution: {
         type: String,
-        enum: ['Legislature', 'Executive', 'Judiciary'],
+        enum: ['legislature', 'executive', 'judiciary'],
         required: true
     }
 }, { collection: 'games' });
